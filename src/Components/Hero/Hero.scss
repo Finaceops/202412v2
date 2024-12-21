@@ -1,0 +1,243 @@
+@use "sass:map";
+@use "sass:color";
+$text-color: #123453;
+$color: #75a834;
+$button-text-color: white;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 868px,
+    // originally 768
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+// Medium devices (tablets, 768px and up)
+// Large devices (desktops, 992px and up)
+// X-Large devices (large desktops, 1200px and up)
+// XX-Large devices (larger desktops, 1400px and up)
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    // padding-left: 0;
+    // height: 100vh;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 12%;
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+.hero-left {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    max-width: 90%;
+    height: auto;
+}
+
+.hero-para-1 {
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.line-one {
+    color: $text-color;
+    font-size: 60px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.line-two {
+    color: $text-color;
+    font-size: 60px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.color {
+    font-size: 60px;
+    color: $color;
+    font-weight: 700;
+}
+
+.hero-para-2 {
+    color: $text-color;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    // font-weight: 400;
+    // width: 75%;
+}
+
+.hero-para-3 {
+    color: $text-color;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    // font-weight: 400;
+    // width: 75%;
+}
+
+.button {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.get-started {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color;
+    border: solid $color;
+    background: $button-text-color;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-a-demo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: $color;
+    color: $button-text-color;
+    border: solid $color;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+// button hover effects goes here
+
+// Responsiveness
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        // margin: 5%;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .hero-left {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .hero-para-1 {
+        font-size: 50px;
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+
+    .button {
+        // flex-direction: column;
+        gap: 15px;
+    }
+
+    .phone-mockup {
+        width: 70%;
+        display: grid;
+    }
+
+    .hero-right {
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin: 5%;
+        padding: 20px 10px;
+        gap: 0px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-para-1 {
+        font-size: 50px;
+        margin-top: 15%;
+        margin-bottom: 10px;
+    }
+
+    .hero-para-2 {
+        width: 70vw;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: fit-content;
+        gap: 10px;
+    }
+
+    .phone-mockup {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: 5%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0px;
+    }
+
+    .line-one {
+        font-size: 45px;
+    }
+
+    .line-two {
+        font-size: 45px;
+    }
+
+    .line-two span {
+        font-size: 45px;
+    }
+
+    .hero-para-1 {
+        font-size: 45px;
+        margin-top: 20%;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .get-started,
+    .book-a-demo {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .phone-mockup {
+        width: 100%;
+    }
+}
