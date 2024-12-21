@@ -62,7 +62,7 @@ const Hero = () => {
             </div>
             <div className="hero-right">
                 <img
-                    src="/yes.svg"
+                    src="/finace/yes.svg"
                     alt="Finace App displayed on a phone mockup"
                     className='phone-mockup'
                     style={{

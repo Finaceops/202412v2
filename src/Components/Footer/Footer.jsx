@@ -33,7 +33,7 @@ const Footer = () => {
                         aria-label="Download the mobile app from Google Play Store"
                     >
                         <img 
-                            src="/GetItOnGooglePlay_Badge_Web_color_English.png" 
+                            src="/finace/GetItOnGooglePlay_Badge_Web_color_English.png" 
                             alt="Get it on Google Play button image" 
                             aria-label="Google Play Store badge"
                         />

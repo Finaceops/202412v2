@@ -59,7 +59,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <a href="/" className="logo" aria-label="Navigate to home">
-        <img src="/Logo.png" alt="Finace logo" />
+        <img src="/finace/Logo.png" alt="Finace logo" />
       </a>
 
       <a
@@ -73,7 +73,7 @@ const Navbar = () => {
       </a>
 
       <nav className={`navbar ${isNavActive ? 'active' : ''}`}>
-        <a href="/" aria-label="Navigate to home page">Home</a>
+        <a href="/finace" aria-label="Navigate to home page">Home</a>
         <a onClick={scrollToGetStarted} aria-label="Learn more about services offered by Finace">Services</a>
         <Link to="/faq" aria-label="Navigate to Frequently Asked Questions page">FAQs</Link>
         <a onClick={scrollToAboutUs} aria-label="Learn more about Finace">About Us</a>
