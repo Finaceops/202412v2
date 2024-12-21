@@ -1,0 +1,254 @@
+@use "sass:color";
+
+$box-color: #E6FFE9;
+$hover-color-green: #75a834;
+$hover-color-blue: #133453;
+$text-color: white;
+$hover-transition-duration: 0.6s;
+$primary-color: #133453;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+.finance-advantage {
+    margin: 0 14%;
+    padding: 50px;
+
+    h1 {
+        font-size: 40px;
+        margin: 20px 0 60px;
+        font-weight: 700;
+        color: $primary-color;
+        text-align: center;
+    }
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+
+    &>div {
+        flex: 1;
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.benefit-box {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 10px $shadow-color;
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    h3 {
+        font-size: 28px;
+        color: $primary-color;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            // text-justify: inter-word;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+                // background-color: $hover-color;
+                color: $text-color;
+            }
+
+            .icon {
+                width: 30px;
+                height: 30px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &.employer {
+        background-color: #e9f4e8;
+
+        ul li:hover {
+            background-color: $hover-color-green;
+        }
+    }
+
+    &.employee {
+        background-color: #e0f7fa;
+
+        ul li:hover {
+            background-color: $hover-color-blue;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.placeholder {
+    color: #aaa;
+    font-style: italic;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.benefit-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#hidden-employer {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#inside-employer {
+    display: none;
+}
+
+#inside-employee {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .benefit-container {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        &>div {
+            max-width: 500px;
+            flex-basis: 100%;
+        }
+
+        #hide-employer {
+            display: none;
+        }
+
+        #employee-img {
+            display: none;
+        }
+
+        #inside-employer {
+            display: block;
+            max-width: 215px;
+        }
+
+        #inside-employer img {
+            max-width: 215px;
+        }
+
+        #inside-employee {
+            display: block;
+        }
+
+        #inside-employee img {
+            max-width: 215px;
+        }
+    }
+
+    .finance-advantage {
+        margin: 0 8%;
+        padding: 40px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .finance-advantage {
+        margin: 0 5%;
+        padding: 30px;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .benefit-box {
+        padding: 20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        ul li {
+            font-size: 16px;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .finance-advantage {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .benefit-box {
+        padding: 15px;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        ul li {
+            font-size: 14px;
+
+            .icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    #hidden-employer img {
+        max-width: 150px;
+    }
+
+    .benefit-container img {
+        max-width: 150px;
+    }
+}

@@ -1,0 +1,234 @@
+$bg-color: #123453;
+$green: #75a834;
+$text-color: white;
+
+.useful-section {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0 14%;
+    z-index: 7;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px;
+    flex-wrap: wrap;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: 1 1 30%;
+}
+
+.contact h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.text {
+    margin-left: 0;
+    text-align: center;
+}
+
+.text h4::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.text::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+span {
+    color: #757575;
+    font-size: 15px;
+}
+
+.useful-links {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Finace {
+    width: 45%;
+    padding: 25px;
+}
+
+.Finace h1::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.Finace::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.right h4::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.right {
+    padding: 25px;
+    padding-right: 60px;
+    // width: 45%;
+}
+
+.right h4 {
+    text-align: center;
+}
+
+.lists {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+}
+
+.links-list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.links-list li {
+    color: white;
+}
+
+.links-list li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin: 5px 0;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    color: $green;
+}
+
+.links-list li a:hover {
+    cursor: pointer;
+    color: $green;
+}
+
+.list-item::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.appstore img {
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.appstore img:hover {
+    transform: scale(1.1);
+}
+
+.appstore img::selection {
+    background-color: $green;
+    color: #ffffff;
+}
+
+// Responsiveness
+@media only screen and (max-width: 1024px) {
+    .section {
+        padding: 0 10%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .useful-links {
+        flex-direction: column;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .lists {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        padding: 0 5%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .useful-links {
+        flex-direction: column;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .right h4 {
+        font-size: 18px;
+    }
+
+    .links-list li a {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section {
+        padding: 0 2%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .useful-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Finace,
+    .right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact {
+        margin-bottom: 15px;
+    }
+
+    .links-list li a {
+        font-size: 12px;
+    }
+}
