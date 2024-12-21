@@ -59,7 +59,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <a href="/" className="logo" aria-label="Navigate to home">
-        <img src="/finace/Logo.png" alt="Finace logo" />
+        <img src="/202412v2/Logo.png" alt="Finace logo" />
       </a>
 
       <a
